@@ -1,0 +1,179 @@
+<!-- <!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Quiz Competition Certificate</title>
+<style>
+  body {
+    font-family: Arial, sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+  }
+ 
+  #certificate {
+    max-width: 600px;
+    text-align: center;
+    padding: 20px;
+    border: 2px solid #333;
+    border-radius: 10px;
+  }
+
+  #nameInput {
+    margin-bottom: 20px;
+    padding: 10px;
+    width: 100%;
+    box-sizing: border-box;
+  }
+
+  #downloadBtn {
+    background-color: #4CAF50;
+    color: white;
+    padding: 10px 20px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+</style>
+</head>
+<body>
+<div id="certificate">
+  <h2>Congratulations!</h2>
+  <p>You have successfully completed the quiz competition.</p>
+  <p>Please enter your name below to generate your certificate:</p>
+  <input type="text" id="nameInput" placeholder="Enter your name">
+  <a href="" id="downloadBtn" download="Quiz_Certificate.png">Download Certificate</a>
+</div>
+
+<script>
+  document.getElementById('downloadBtn').addEventListener('click', function() {
+    var name = document.getElementById('nameInput').value;
+    if (!name) {
+      alert('Please enter your name to generate the certificate.');
+      return;
+    }
+
+    var canvas = document.createElement('canvas');
+    canvas.width = 800;
+    canvas.height = 400;
+    var ctx = canvas.getContext('2d');
+
+    ctx.fillStyle = '#FFFFE0';
+    ctx.fillRect(0, 0, canvas.width, canvas.height);
+
+    ctx.font = 'bold 40px Arial';
+    ctx.fillStyle = '#333';
+    ctx.textAlign = 'center';
+    ctx.fillText('Certificate of Achievement', canvas.width / 2, 100);
+    ctx.font = 'bold 30px Arial';
+    ctx.fillText('This certifies that', canvas.width / 2, 200);
+    ctx.font = 'italic 40px Arial';
+    ctx.fillText(name, canvas.width / 2, 260);
+    ctx.font = 'bold 30px Arial';
+    ctx.fillText('has successfully completed the quiz competition.', canvas.width / 2, 320);
+
+    var link = document.createElement('a');
+    link.download = 'Quiz_Certificate.png';
+    link.href = canvas.toDataURL('image/png');
+    link.click();
+  });
+</script>
+</body>
+</html> -->
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Quiz Competition Certificate</title>
+<style>
+  body {
+    font-family: Arial, sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+  }
+ 
+  #certificate {
+    max-width: 600px;
+    text-align: center;
+    padding: 20px;
+    border: 2px solid #333;
+    border-radius: 10px;
+  }
+
+  #nameInput {
+    margin-bottom: 20px;
+    padding: 10px;
+    width: 100%;
+    box-sizing: border-box;
+  }
+
+  #downloadBtn {
+    background-color: #4CAF50;
+    color: white;
+    padding: 10px 20px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+</style>
+</head>
+<body>
+<div id="certificate">
+  <h2>Congratulations!</h2>
+  <p>You have successfully completed the quiz competition.</p>
+  <p>Please enter your name below to generate your certificate:</p>
+  <input type="text" id="nameInput" placeholder="Enter your name">
+  <button id="downloadBtn">Download Certificate</button>
+</div>
+
+<script>
+  document.getElementById('downloadBtn').addEventListener('click', function() {
+    var name = document.getElementById('nameInput').value;
+    if (!name) {
+      alert('Please enter your name to generate the certificate.');
+      return;
+    }
+
+    var canvas = document.createElement('canvas');
+    canvas.width = 800;
+    canvas.height = 400;
+    var ctx = canvas.getContext('2d');
+
+    ctx.fillStyle = '#FFFFE0';
+    ctx.fillRect(0, 0, canvas.width, canvas.height);
+
+    ctx.font = 'bold 40px Arial';
+    ctx.fillStyle = '#333';
+    ctx.textAlign = 'center';
+    ctx.fillText('Certificate of Achievement', canvas.width / 2, 100);
+    ctx.font = 'bold 30px Arial';
+    ctx.fillText('This certifies that', canvas.width / 2, 200);
+    ctx.font = 'italic 40px Arial';
+    ctx.fillText(name, canvas.width / 2, 260);
+    ctx.font = 'bold 30px Arial';
+    ctx.fillText('has successfully completed the quiz competition.', canvas.width / 2, 320);
+
+    var link = document.createElement('a');
+    link.download = 'Quiz_Certificate.png';
+    link.href = canvas.toDataURL('image/png');
+    link.click();
+  });
+</script>
+</body>
+</html>
+
